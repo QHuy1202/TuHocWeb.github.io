@@ -1,0 +1,128 @@
+/* Thiết lập mặc định cho toàn bộ trang */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Vùng bao toàn bộ ứng dụng */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* Hộp ứng dụng chính */
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* Tiêu đề ứng dụng */
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Biểu tượng ghi chú cạnh tiêu đề */
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Hàng chứa ô nhập và nút thêm */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Ô nhập liệu */
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+/* Nút Add */
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Danh sách các mục công việc */
+ul li{
+    list-style: none;
+    font-style: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Icon hình tròn trước mỗi mục */
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked16px.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+
+/* Khi mục đã hoàn thành */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Icon khi mục đã hoàn thành */
+ul li.checked::before{
+    background-image: url(images/checked16px.png);
+}
+
+/* Nút "x" để xóa công việc */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+/* Hiệu ứng khi di chuột vào dấu "x" */
+ul li span:hover{
+    background: #edeef0;
+}
